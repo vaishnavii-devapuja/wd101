@@ -10,7 +10,7 @@ function validateAge(today, dobobj) {
 const dobelement = document.getElementById("dob");
 dobelement.addEventListener("change", () => {
     const [y, m, d] = document.getElementById("dob").value.split("-");
-    const dob = new Date(y, m - 1, d); 
+    const dob = new Date(y, m - 1, d); // Month is zero-indexed
     const Today = new Date();
     const age = validateAge(Today, dob);
     if (age < 18 || age > 55) {
@@ -27,7 +27,7 @@ const email = document.getElementById("email");
 email.addEventListener("input", () => validate(email));
 function validate(ele) {
     if (ele.validity.typeMismatch) {
-        ele.setCustomValidity("The email is not in the right format!");
+        ele.setCustomValidity("The Email is not in the right format!!!");
         ele.reportValidity();
     } else {
         ele.setCustomValidity("");
@@ -93,4 +93,8 @@ function saveUserForm(event) {
     form.reset();
 }
 
-displayEntries();
+window.addEventListener("load", () => {
+    displayEntries();
+});
+
+
