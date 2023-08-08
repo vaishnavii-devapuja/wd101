@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3333cc 80%, #66ffff 70%);
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(to bottom, #3333cc 70%, #66ffff 100%);
+}
+
+.registration-box {
+    background-color: rgba(240, 240, 240, 0.8);
+    border: 2px solid #ccc;
+    padding: 40px;
+    width: 100%; 
+    max-width: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    margin-right: 20px; 
+}
+
+#entries-table {
+    background-color: rgba(240, 240, 240, 0.8);
+    border-collapse: collapse;
+    width: 100%; 
+    max-width: 40%; 
+}
+
+#entries-table th,
+#entries-table td {
+    background-color: rgba(240, 240, 240, 0.8);
+    border: 2px solid #000;
+    padding: 8px;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 0;
+    font-family: Georgia;
+    font-size: 28px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+button {
+    display: flex;
+    border: 2px solid #ccc;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    background-color: limegreen;
+    font-size: 20px;
+    color: white;
+}
+
+.registration-box input[type="text"],
+.registration-box input[type="email"],
+.registration-box input[type="password"]
+{
+    width: 70%; 
+    height:3vh;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+.registration-box input[type="date"]
+{
+    width: 25%; 
+    height:3vh;
+    padding: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+.accept-terms-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1px;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+    .container {
+        flex-direction: column; 
+    }
+
+    .registration-box,
+    #entries-table 
+     {
+        max-width: 100%; 
+        margin-right: 0; 
+    }
+}
